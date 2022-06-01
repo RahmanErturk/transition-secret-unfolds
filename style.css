@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: darkmagenta;
+}
+
+span {
+    color: #8a6e67;
+    transition: 1s;
+    display: inline-block;
+    padding-left: 12px;
+}
+
+.box {
+    width: 150px;
+    aspect-ratio: 1/1;
+    transition-duration: 1s;
+    border-radius: 4px;
+}
+
+.box1 {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    background-color: #FB8B24;
+}
+
+.box2 {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    background-color: #D90368;
+}
+
+.box3 {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    background-color: #820263;
+}
+.box4 {
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    background-color: #04A777;
+}
+main:hover .box1 {
+    transform: translateX(-100%) rotateZ(90deg);
+}
+main:hover .box2 {
+    transform: translateX(100%) rotateZ(-90deg);
+}
+main:hover .box3 {
+    transform: translateX(-100%) rotateZ(-90deg);
+}
+main:hover .box4 {
+    transform: translateX(100%) rotateZ(90deg);
+}
+
+main:hover span {
+    transform: scale(1.2);
+}
